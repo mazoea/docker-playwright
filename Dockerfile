@@ -1,5 +1,6 @@
-FROM mcr.microsoft.com/playwright:v1.43.1-jammy
+FROM mcr.microsoft.com/playwright:v1.48.0-jammy
 WORKDIR /test
-RUN npx -y playwright@1.43.1 install --with-deps && \
-    npm install -g @playwright/test
+RUN npx -y playwright@1.48.0 install --with-deps && \
+    npm install -g @playwright/test && \
+    npm install dotenv --production
 CMD ["npx", "playwright", "test"]
