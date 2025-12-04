@@ -1,4 +1,4 @@
-set TAG=1.56
+set TAG=1.57
 
 git push origin :%TAG%
 git tag -d %TAG%
